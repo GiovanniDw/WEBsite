@@ -209,11 +209,13 @@ h3 {
 h4 {
   font-size: 22px; }
 
-header {
+.main-header {
   height: 60px;
   background: #06183d;
   color: #fff; }
-  header .logo {
+  .main-header a {
+    color: white; }
+  .main-header .logo {
     height: 20px;
     width: 150px;
     margin-right: 0px;
@@ -222,16 +224,16 @@ header {
     padding-right: 0px;
     padding-bottom: 0px;
     padding-left: 0px; }
-  header .container-header {
+  .main-header .container-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 60px; }
-  header nav ul {
+  .main-header nav ul {
     display: flex;
     list-style: none;
     padding-inline-start: 0; }
-    header nav ul a {
+    .main-header nav ul a {
       display: block;
       padding: 1em; }
 
@@ -243,14 +245,33 @@ header {
   /* Do not repeat the image */
   background-size: cover;
   background-image: url(https://content-static.eurostar.com/styles/1600x420/s3/2018-10/Christmas-in-London.jpg); }
+  .hero h1 {
+    color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px 0px 6px;
+    max-width: 300px;
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px 0px 6px;
+    line-height: 0.95;
+    font-size: 36px;
+    text-transform: uppercase;
+    padding-bottom: 22px; }
   .hero .container {
     padding-bottom: 50px;
     padding-top: 50px; }
 
-button {
+button, .btn-main {
   height: 50px;
-  background: yellow;
-  border-radius: 5px; }
+  border: none;
+  border-radius: 5px;
+  background-color: #fbdd0f;
+  box-shadow: #dec204 0px 2px 0px 0px, rgba(0, 0, 0, 0.2) 0px 3px 2px 0px;
+  color: #55565a;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-left: 2em;
+  padding-right: 2em; }
 
 article {
   background: yellow;

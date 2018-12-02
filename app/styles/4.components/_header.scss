@@ -1,7 +1,12 @@
-header {
+.main-header {
     height: 60px;
     background: $primary-bg;
     color: #fff;
+
+    a{
+      color:white;
+    
+    }
 
     .logo {
         height: 20px;
@@ -37,12 +42,12 @@ header {
             li {
 
 
-               
+
             }
             a{
             	display: block;
  padding: 1em;
- 
+
 
             }
         }
