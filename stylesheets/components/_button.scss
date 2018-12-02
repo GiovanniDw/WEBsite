@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+button, .btn-main{
+			height: 50px;
+			border:none;
+			border-radius: 5px;
+			background-color: rgb(251, 221, 15);
+			box-shadow: rgb(222, 194, 4) 0px 2px 0px 0px, rgba(0, 0, 0, 0.2) 0px 3px 2px 0px;
+			color: rgb(85, 86, 90);
+			text-transform: uppercase;
+			font-weight: 700;
+			padding-left: 2em;
+			padding-right: 2em;
+		}

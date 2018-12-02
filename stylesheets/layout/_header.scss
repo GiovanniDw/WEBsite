@@ -1,0 +1,58 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+.main-header {
+    height: 60px;
+    background: $brand-color;
+    color: $text-color-light;
+
+    a{
+      color: $text-color-light;
+
+    }
+
+    .logo {
+        height: 20px;
+        width: 150px;
+
+
+        margin-right: 0px;
+
+        margin-left: 20px;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+
+
+    }
+
+    .container-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+
+    }
+
+    nav {
+
+        ul {
+            display: flex;
+            list-style: none;
+    padding-inline-start: 0;
+
+            li {
+
+
+
+            }
+            a{
+            	display: block;
+ padding: 1em;
+
+
+            }
+        }
+    }
+}
