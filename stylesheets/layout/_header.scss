@@ -8,7 +8,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    min-height: 60px;
+
 
     a{
       color: $text-color-light;
@@ -35,7 +36,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 60px;
+        //height: 60px;
 
     }
 
@@ -45,6 +46,8 @@
             display: flex;
             list-style: none;
     padding-inline-start: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 
             li {
 
@@ -53,7 +56,8 @@
             }
             a{
             	display: block;
- padding: 1em;
+ padding-left: 10px;
+ padding-right: 10px;
 
 
             }

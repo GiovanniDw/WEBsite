@@ -1,22 +1,24 @@
 .container-flex {
-  display: flex;
-  flex-direction: row;
-justify-content:space-between;
-  aside{
-  //  flex-grow: 1;
-  }
-  main{
-    //flex-grow: 2;
-  }
+  //
+
 }
 
 .articles {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-right: -1rem;
-  margin-left: -1rem;
-  flex: 0 1 auto;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // margin-right: -1rem;
+  // margin-left: -1rem;
+  // flex: 0 1 auto;
+//   box-sizing: border-box;
+// display: flex;
+// flex-grow: 0;
+// flex-shrink: 1;
+// flex-basis: auto;
+// flex-direction: row;
+// flex-wrap: wrap;
+// margin-right: -1rem;
+// margin-left: -1rem;
 
 
 
@@ -32,33 +34,17 @@ justify-content:space-between;
 
 
   }
-  @media only screen and (min-width:0em){ .article-item {
-    flex-basis: 100%;
-    max-width: 100%;
-    display: block;
-  }
-  }
-  @media only screen and (min-width:37.5625em){ .article-item {
-    flex-basis: 50%;
-    max-width: 50%;
-    display: block;
-  }
-  }
-  @media only screen and (min-width:50.0625em){ .article-item {
-    flex-basis: 50%;
-    max-width: 50%;
-    display: block;
-  }
-  }
-  @media only screen and (min-width:56.3125em){ .article-item {
-    flex-basis: 33.333333333333331%;
-    max-width: 33.333333333333331%;
-    display: block;
-  }
-  }
 
 
 
 
 
+
+}
+.sortOptions{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

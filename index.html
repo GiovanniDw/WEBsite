@@ -14,8 +14,8 @@
       <div class="logo"><a href=""><img class="c-navigation__logo-image" src="https://static.eurostar.com/shared/images/logos/logo.svg" alt="Eurostar Homepage"></a></div>
       <nav>
         <ul>
-          <li><a href="#">Favorieten</a></li>
-          <li><a href="#">Inloggen/Regristreren</a>
+          <li><a href="#"><i class="material-icons md-dark">favorite</i></a></li>
+          <li><a href="#"><i class="material-icons md-dark">person</i></a>
           </li>
         </ul>
       </nav>
@@ -24,7 +24,7 @@
   </header>
   <section class="hero">
     <div class="container">
-      <h1>Verhalen</h1>
+      <h1>99 verhalen voor op reis</h1>
       <button class="btn-main">Verras mij</button>
     </div>
   </section>
@@ -38,7 +38,7 @@
           <legend>
             <h4>Leestijd</h4>
           </legend>
-          <input type="range" min="1" max="100" value="1" step="10">
+          <input type="range" multiple min="0" max="10" value="1" step="1">
         </fieldset>
       </form>
 
@@ -47,31 +47,37 @@
           <legend>
             <h4>Genre</h4>
           </legend>
-          <input type="checkbox" name="vehicle1" value="Bike" checked>Alle Genres<br>
-          <input type="checkbox" name="vehicle2" value="Car">Genre<br>
-          <input type="checkbox" name="vehicle3" value="Boat">Genre<br>
-          <input type="checkbox" name="vehicle1" value="Bike">Genre<br>
-          <input type="checkbox" name="vehicle2" value="Car">Genre<br>
-          <input type="checkbox" name="vehicle3" value="Boat">Genre<br>
-          <input type="checkbox" name="vehicle1" value="Bike">Genre<br>
-          <input type="checkbox" name="vehicle2" value="Car">Genre<br>
-          <input type="checkbox" name="vehicle3" value="Boat">Genre<br>
-          <input type="checkbox" name="vehicle1" value="Bike">Genre<br>
-          <input type="checkbox" name="vehicle2" value="Car">Genre<br>
-          <input type="checkbox" name="vehicle3" value="Boat">Genre<br>
-          <input type="checkbox" name="vehicle1" value="Bike">Genre<br>
-          <input type="checkbox" name="vehicle2" value="Car">Genre<br>
-          <input type="checkbox" name="vehicle3" value="Boat">Genre<br>
-          <input type="checkbox" name="vehicle1" value="Bike">Genre<br>
-          <input type="checkbox" name="vehicle2" value="Car">Genre<br>
-          <input type="checkbox" name="vehicle3" value="Boat">Genre
+          <input type="checkbox" name="alles" value="all" id="alle-genres" checked>
+          <label for="alle-genres">Alle Genres</label>
+
+          <input type="checkbox" name="genre" value="twee" id="twee">
+          <label for="twee">Opinie</label>
+          <input type="checkbox" name="genre" value="drie" id="drie">
+          <label for="drie">drie</label>
+          <input type="checkbox" name="genre" value="vier" id="vier">
+          <label for="vier">vier</label>
+          <input type="checkbox" name="genre" value="vijf" id="vijf">
+          <label for="vijf">vijf</label>
+          <input type="checkbox" name="genre" value="zes" id="zes">
+          <label for="zes">zes</label>
+          <input type="checkbox" name="genre" value="zeven" id="zeven">
+          <label for="zeven">zeven</label>
+          <input type="checkbox" name="genre" value="acht" id="acht">
+          <label for="acht">acht</label>
+          <input type="checkbox" name="genre" value="negen" id="negen">
+          <label for="negen">negen</label>
+          <input type="checkbox" name="genre" value="tien" id="tien">
+          <label for="tien">tien</label>
+          <input type="checkbox" name="genre" value="twee" id="twee">
+          <label for="twee">twee</label>
+
         </fieldset>
       </form>
 
     </aside>
     <main>
-      <section>geselecteerde filters</section>
-      <section>
+
+      <section class="sortOptions">
         <form class="filter">
           <fieldset>
             <legend>
@@ -90,6 +96,7 @@
         </form>
         <p>21 van de 99 items</p>
       </section>
+      <section>geselecteerde filters</section>
       <section class="articles">
         <article class="article-item">
           <header>

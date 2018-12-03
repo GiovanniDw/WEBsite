@@ -29,10 +29,35 @@
 
 
     article{
-    background:yellow;
+
 
     height: 389px;
     border-radius: 7px;
     //padding: 20px;
     //margin: 10px;
+    border: 1px solid $light-grey;
+    box-shadow: $shadow;
     }
+aside{
+  form{
+    border: 1px solid $light-grey;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: $shadow;
+  }
+  fieldset{
+    border:0;
+  }
+
+}
+
+main{
+  // margin-right: 20px;
+  // margin-left: 20px;
+}
+
+input[type=range]{
+  width: 100%;
+   -webkit-appearance: none;
+
+}
