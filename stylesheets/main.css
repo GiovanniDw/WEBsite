@@ -511,9 +511,11 @@ h4 {
   width: 1px; }
 
 .main-header {
-  height: 60px;
   background: #06183d;
-  color: #e1e1e1; }
+  color: #e1e1e1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
   .main-header a {
     color: #e1e1e1; }
   .main-header .logo {
@@ -538,6 +540,46 @@ h4 {
       display: block;
       padding: 1em; }
 
+.container-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.articles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -1rem;
+  margin-left: -1rem;
+  flex: 0 1 auto; }
+  .articles .article-item {
+    box-sizing: border-box;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    padding-right: 1rem;
+    padding-left: 1rem; }
+  @media only screen and (min-width: 0em) {
+    .articles .article-item {
+      flex-basis: 100%;
+      max-width: 100%;
+      display: block; } }
+  @media only screen and (min-width: 37.5625em) {
+    .articles .article-item {
+      flex-basis: 50%;
+      max-width: 50%;
+      display: block; } }
+  @media only screen and (min-width: 50.0625em) {
+    .articles .article-item {
+      flex-basis: 50%;
+      max-width: 50%;
+      display: block; } }
+  @media only screen and (min-width: 56.3125em) {
+    .articles .article-item {
+      flex-basis: 33.333333333333331%;
+      max-width: 33.333333333333331%;
+      display: block; } }
+
 button, .btn-main {
   height: 50px;
   border: none;
@@ -551,7 +593,7 @@ button, .btn-main {
   padding-right: 2em; }
 
 .hero {
-  padding-left: 20px;
+  padding: 20px;
   background-position: center;
   /* Center the image */
   background-repeat: no-repeat;
@@ -574,8 +616,6 @@ button, .btn-main {
 article {
   background: yellow;
   height: 389px;
-  border-radius: 7px;
-  padding: 20px;
-  margin: 10px; }
+  border-radius: 7px; }
 
 /*# sourceMappingURL=main.css.map */
