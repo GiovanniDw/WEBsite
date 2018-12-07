@@ -2,62 +2,58 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 
-	.hero{
-		padding: 20px;
-		background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover;
-		background-image: url(https://content-static.eurostar.com/styles/1600x420/s3/2018-10/Christmas-in-London.jpg);
+.hero {
+	padding: 20px;
+	background-position: center;
+	/* Center the image */
+	background-repeat: no-repeat;
+	/* Do not repeat the image */
+	background-size: cover;
+	background-image: url("https://content-static.eurostar.com/styles/1600x420/s3/2018-10/Christmas-in-London.jpg");
 
-		h1{
-			color: #fff;
-			text-shadow: rgba(0, 0, 0, 0.6) 0px 0px 6px;
-			max-width: 300px;
+	h1 {
+		color: #fff;
+		text-shadow: rgba(0, 0, 0, 0.6) 0 0 6px;
+		max-width: 300px;
+		font-style: normal;
+		font-weight: 400;
+		color: rgb(255, 255, 255);
+		text-shadow: rgba(0, 0, 0, 0.6) 0 0 6px;
+		line-height: 0.95;
+		font-size: 36px;
+		text-transform: uppercase;
+		padding-bottom: 22px;
+	}
+}
 
-			font-style: normal;
-			font-weight: 400;
-			color: rgb(255, 255, 255);
-			text-shadow: rgba(0, 0, 0, 0.6) 0px 0px 6px;
-			line-height: 0.95;
-			font-size: 36px;
-			text-transform: uppercase;
-			padding-bottom: 22px;
-		}
+article {
+	height: 389px;
+	border-radius: 7px;
+	//padding: 20px;
+	//margin: 10px;
+	border: 1px solid $light-grey;
+	box-shadow: $shadow;
+}
 
-
+aside {
+	form {
+		border: 1px solid $light-grey;
+		border-radius: 4px;
+		margin-bottom: 20px;
+		box-shadow: $shadow;
 	}
 
-
-    article{
-
-
-    height: 389px;
-    border-radius: 7px;
-    //padding: 20px;
-    //margin: 10px;
-    border: 1px solid $light-grey;
-    box-shadow: $shadow;
-    }
-aside{
-  form{
-    border: 1px solid $light-grey;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    box-shadow: $shadow;
-  }
-  fieldset{
-    border:0;
-  }
-
+	fieldset {
+		border: 0;
+	}
 }
 
-main{
-  // margin-right: 20px;
-  // margin-left: 20px;
+main {
+	// margin-right: 20px;
+	// margin-left: 20px;
 }
 
-input[type=range]{
-  width: 100%;
-   -webkit-appearance: none;
-
+input[type=range] {
+	width: 100%;
+	-webkit-appearance: none;
 }
