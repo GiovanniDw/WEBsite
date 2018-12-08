@@ -1,66 +1,49 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
-.main-header {
 
-    background: $brand-color;
+.main-header {
+  background: $brand-color;
+  color: $text-color-light;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+
+  a {
     color: $text-color-light;
+  }
+
+  .logo {
+    height: 20px;
+    width: 150px;
+    margin-right: 0;
+    //margin-left: 20px;
+    padding: 0;
+  }
+
+  .container-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 60px;
+    //height: 60px;
+  }
 
+  nav {
+    ul {
+      display: flex;
+      list-style: none;
+      padding-inline-start: 0;
+      margin-top: 0;
+      margin-bottom: 0;
 
-    a{
-      color: $text-color-light;
+      li {}
 
+      a {
+        display: block;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
     }
-
-    .logo {
-        height: 20px;
-        width: 150px;
-
-
-        margin-right: 0px;
-
-        //margin-left: 20px;
-        padding-top: 0px;
-        padding-right: 0px;
-        padding-bottom: 0px;
-        padding-left: 0px;
-
-
-    }
-
-    .container-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        //height: 60px;
-
-    }
-
-    nav {
-
-        ul {
-            display: flex;
-            list-style: none;
-    padding-inline-start: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-
-            li {
-
-
-
-            }
-            a{
-            	display: block;
- padding-left: 10px;
- padding-right: 10px;
-
-
-            }
-        }
-    }
+  }
 }

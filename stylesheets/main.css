@@ -522,11 +522,8 @@ h4 {
   .main-header .logo {
     height: 20px;
     width: 150px;
-    margin-right: 0px;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px; }
+    margin-right: 0;
+    padding: 0; }
   .main-header .container-header {
     display: flex;
     justify-content: space-between;
