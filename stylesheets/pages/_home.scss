@@ -27,12 +27,20 @@
 }
 
 article {
-	height: 389px;
+
 	border-radius: 7px;
 	//padding: 20px;
 	//margin: 10px;
 	border: 1px solid $light-grey;
 	box-shadow: $shadow;
+
+	header,footer{
+		padding: 1em;
+	}
+	.article-img{
+		border-radius: 7px 7px 0 0;
+	}
+
 }
 
 aside {
