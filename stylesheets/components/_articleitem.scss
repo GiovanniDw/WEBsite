@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the article component.
+// -----------------------------------------------------------------------------
+article {
+
+	border-radius: 7px;
+	//padding: 20px;
+	//margin: 10px;
+	border: 1px solid $light-grey;
+	box-shadow: $shadow;
+
+	header,footer{
+		padding: 1em;
+	}
+	.article-img{
+		border-radius: 7px 7px 0 0;
+	}
+
+}
+
+.article-item{
+
+			header{
+				display: flex;
+				justify-content: space-between;
+			}
+			footer{
+				display: flex;
+				justify-content:space-between;
+
+				&:first-child{
+					flex-grow: 2;
+				}
+			}
+		}

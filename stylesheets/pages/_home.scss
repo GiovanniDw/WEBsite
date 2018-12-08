@@ -26,24 +26,40 @@
 	}
 }
 
-article {
 
-	border-radius: 7px;
-	//padding: 20px;
-	//margin: 10px;
-	border: 1px solid $light-grey;
-	box-shadow: $shadow;
 
-	header,footer{
-		padding: 1em;
-	}
-	.article-img{
-		border-radius: 7px 7px 0 0;
-	}
+aside {
+
+	label.filter{
+		border-radius: 4px;
+background: $light-grey;
+
+
+&::after{
+
+	 content: 'arrow_drop_down';
+   font-family: 'Material Icons';
+   font-weight: normal;
+   font-style: normal;
+
+
+
 
 }
 
-aside {
+
+
+
+
+
+
+
+	}
+	form{
+		display: none;
+		transition: 1000s;
+	}
+
 	form {
 		border: 1px solid $light-grey;
 		border-radius: 4px;
@@ -63,5 +79,12 @@ main {
 
 input[type=range] {
 	width: 100%;
+	// -webkit-appearance: none;
+}
+input[type=checkbox] {
+
 	-webkit-appearance: none;
+}
+input[type=checkbox]:checked ~ form {
+    display: block;
 }
