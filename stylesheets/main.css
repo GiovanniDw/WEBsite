@@ -282,7 +282,8 @@ button:-moz-focusring,
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  /* padding: 0.35em 0.625em 0.75em; */
+  }
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -589,7 +590,11 @@ body {
   display: -ms-flex;
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: baseline; }
+  .sortOptions p {
+    margin: 0;
+    padding: 0; }
 
 .btn-main {
   height: 50px;
@@ -692,6 +697,60 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #a8e2ea; }
 
+.checkbox input[type="checkbox"] {
+  opacity: 0; }
+
+.checkbox label {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1em;
+  /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+  padding-left: 1.6em; }
+
+.checkbox label::before,
+.checkbox label::after {
+  position: absolute;
+  content: "";
+  /*Needed for the line-height to take effect*/
+  display: inline-block; }
+
+/*Outer box of the fake checkbox*/
+.checkbox label::before {
+  height: 1.3em;
+  width: 1.3em;
+  border: 1px solid #a8e2ea;
+  border-radius: 3px;
+  left: 0px;
+  /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+   *to vertically center it.
+   */ }
+
+/*Checkmark of the fake checkbox*/
+.checkbox label::after {
+  content: 'done';
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-weight: 900;
+  height: 5px;
+  width: 9px;
+  font-size: 1.5em;
+  left: -1px;
+  top: -6px; }
+
+/*Hide the checkmark by default*/
+.checkbox input[type="checkbox"] + label::after {
+  content: none; }
+
+/*Unhide on the checked state*/
+.checkbox input[type="checkbox"]:checked + label::after {
+  content: "done";
+  color: #24b5c9; }
+
+/*Adding focus styles on the outer-box of the fake checkbox*/
+.checkbox input[type="checkbox"]:focus + label::before {
+  outline: #3b99fc auto 5px; }
+
 article {
   border-radius: 7px;
   border: 1px solid #ededed;
@@ -734,32 +793,43 @@ article {
     text-transform: uppercase;
     padding-bottom: 22px; }
 
-aside label.filter {
-  border-radius: 4px;
-  background: #ededed;
-  display: block;
-  padding: .5em;
-  margin-bottom: 1em; }
-  aside label.filter:hover {
-    background: #999999; }
-  aside label.filter:active {
-    background: #000; }
-  aside label.filter::after {
-    content: 'arrow_drop_down';
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal; }
-aside form {
-  display: none;
-  background: #fff;
-  padding-top: 10px; }
-aside form {
-  border: 1px solid #ededed;
-  border-radius: 4px;
-  margin-bottom: 20px;
-  box-shadow: rgba(0, 0, 0, 0.0470588) 0px 2px 5px 0px; }
-aside fieldset {
-  border: 0; }
+aside {
+  padding-top: 1em; }
+  aside label.filter {
+    border-radius: 5px;
+    background: #ededed;
+    display: block;
+    padding: 0.5em;
+    margin-bottom: 1em; }
+    aside label.filter:hover {
+      background: #c8c8c8; }
+    aside label.filter:focus {
+      background: #000; }
+    aside label.filter::after {
+      content: 'arrow_drop_down';
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      float: right;
+      top: 0; }
+  aside form {
+    display: none;
+    background: #fff;
+    padding-top: 10px;
+    height: 0; }
+  aside form {
+    border: 1px solid #ededed;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.0470588) 0px 2px 5px 0px; }
+  aside fieldset {
+    border: 0;
+    border-bottom: 1px solid #ededed; }
+    aside fieldset:last-child {
+      border-bottom: 0; }
+
+main {
+  padding-top: 1em; }
 
 input[type=range] {
   width: 100%;
@@ -770,9 +840,15 @@ input[type=checkbox] {
   display: none; }
 
 input[type=checkbox]:checked ~ form {
-  display: block; }
+  display: block;
+  opacity: 1;
+  height: auto; }
 
 input[type=checkbox]:default ~ form {
-  display: none; }
+  display: none;
+  opacity: 0; }
+
+form.filter select {
+  -webkit-appearance: none; }
 
 /*# sourceMappingURL=main.css.map */

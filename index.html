@@ -32,7 +32,7 @@
 
     <aside>
       <input type="checkbox" id="filter" name="filter" value="filter">
-     <label class="filter" for="filter"><h4>Verijn resultaten</h4></label>
+     <label class="filter" for="filter">Verijn resultaten</label>
 
 
 
@@ -43,58 +43,59 @@
           </legend>
           <input type="range" multiple min="0" max="10" value="1" step="1">
         </fieldset>
-      </form>
 
-      <form action="#">
+
+
         <fieldset class="genres">
           <legend>
             <h4>Genre</h4>
           </legend>
-          <div>
+          <div class="checkbox">
             <input type="checkbox" name="alles" value="all" id="alle-genres" checked>
             <label for="alle-genres">Alle Genres</label>
           </div>
-          <div>
+          <div class="checkbox">
             <input type="checkbox" name="genre" value="twee" id="twee">
             <label for="twee">Opinie</label>
           </div>
-          <div>
+          <div class="checkbox">
             <input type="checkbox" name="genre" value="drie" id="drie">
             <label for="drie">drie</label>
           </div>
-          <div>
+          <div class="checkbox">
             <input type="checkbox" name="genre" value="vier" id="vier">
             <label for="vier">vier</label>
           </div>
-          <div>
+          <div class="checkbox">
             <input type="checkbox" name="genre" value="vijf" id="vijf">
             <label for="vijf">vijf</label>
           </div>
-          <div>
+          <div class="checkbox">
             <input type="checkbox" name="genre" value="zes" id="zes">
             <label for="zes">zes</label>
           </div>
-          <div>
+          <div class="checkbox">
             <input type="checkbox" name="genre" value="zeven" id="zeven">
             <label for="zeven">zeven</label>
           </div>
-          <div>
+          <div class="checkbox">
             <input type="checkbox" name="genre" value="acht" id="acht">
             <label for="acht">acht</label>
           </div>
-          <div>
+          <div class="checkbox">
             <input type="checkbox" name="genre" value="negen" id="negen">
             <label for="negen">negen</label>
           </div>
-          <div>
+          <div class="checkbox">
             <input type="checkbox" name="genre" value="tien" id="tien">
             <label for="tien">tien</label>
           </div>
-          <div>
-            <input type="checkbox" name="genre" value="twee" id="twee">
-            <label for="twee">twee</label>
+          <div class="checkbox">
+            <input type="checkbox" name="genre" value="elf" id="elf">
+            <label for="elf">twee</label>
           </div>
         </fieldset>
+        <input type="submit" value="Submit">
       </form>
 
     </aside>
@@ -103,7 +104,7 @@
       <section class="sortOptions">
         <form class="filter">
           <fieldset>
-            <legend>
+            <legend class="visually-hidden">
               <h4>Sorteer op</h4>
             </legend>
 
@@ -117,7 +118,7 @@
             </select>
           </fieldset>
         </form>
-        <p>21 van de 99 items</p>
+        <p><small>21 van de 99 items</small></p>
       </section>
       <section>geselecteerde filters</section>
       <section class="articles">
