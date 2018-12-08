@@ -33,8 +33,18 @@ aside {
 	label.filter{
 		border-radius: 4px;
 background: $light-grey;
-height: 5em;
 
+display: block;
+padding: .5em;
+margin-bottom: 1em;
+
+
+&:hover{
+	background: $mid-grey;
+}
+&:active{
+	background: #000;
+}
 
 &::after{
 
@@ -42,6 +52,7 @@ height: 5em;
    font-family: 'Material Icons';
    font-weight: normal;
    font-style: normal;
+
 
 
 
@@ -57,8 +68,9 @@ height: 5em;
 
 	}
 	form{
-
+display: none;
 		background: #fff;
+		padding-top: 10px;
 	}
 
 	form {
@@ -80,11 +92,12 @@ main {
 
 input[type=range] {
 	width: 100%;
-	// -webkit-appearance: none;
+	 -webkit-appearance: none;
 }
 input[type=checkbox] {
 
 	-webkit-appearance: none;
+	display: none;
 }
 input[type=checkbox]:checked ~ form {
     display: block;
