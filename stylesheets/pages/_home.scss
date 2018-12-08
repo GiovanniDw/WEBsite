@@ -33,6 +33,7 @@ aside {
 	label.filter{
 		border-radius: 4px;
 background: $light-grey;
+height: 5em;
 
 
 &::after{
@@ -56,8 +57,8 @@ background: $light-grey;
 
 	}
 	form{
-		display: none;
-		transition: 1000s;
+
+		background: #fff;
 	}
 
 	form {
@@ -87,4 +88,7 @@ input[type=checkbox] {
 }
 input[type=checkbox]:checked ~ form {
     display: block;
+}
+input[type=checkbox]:default ~ form {
+    display: none;
 }
