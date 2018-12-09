@@ -31,10 +31,12 @@ aside {
 
 	label.filter {
 		border-radius: 5px;
-		background: $light-grey;
+		border: 1px solid $light-grey;
 		display: block;
 		padding: 0.5em;
 		margin-bottom: 1em;
+		background: #fff;
+		box-shadow: $shadow;
 
 		&:hover {
 			background: $mid-grey;
@@ -51,6 +53,7 @@ aside {
 			font-style: normal;
 			float: right;
 			top: 0;
+			color: $mid-blue;
 		}
 	}
 
@@ -105,7 +108,7 @@ input[type=checkbox]:default ~ form {
 	opacity: 0;
 }
 
-form.filter{
+form.sort{
 select{
 	-webkit-appearance:none;
 }

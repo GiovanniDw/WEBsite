@@ -282,8 +282,7 @@ button:-moz-focusring,
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
-  /* padding: 0.35em 0.625em 0.75em; */
-  }
+  padding: 0.35em 0.625em 0.75em; }
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -428,7 +427,7 @@ a {
   color: #06183d;
   text-decoration: none; }
   a:hover, a:active, a:focus {
-    color: #222222;
+    color: #4a4a4a;
     text-decoration: underline; }
 
 img {
@@ -438,7 +437,7 @@ img {
  * Basic typography style for copy text
  */
 body {
-  color: #222222;
+  color: #4a4a4a;
   font: normal 100%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -596,18 +595,6 @@ body {
     margin: 0;
     padding: 0; }
 
-.btn-main {
-  height: 50px;
-  border: none;
-  border-radius: 5px;
-  background-color: #fbdd0f;
-  box-shadow: #dec204 0px 2px 0px 0px, rgba(0, 0, 0, 0.2) 0px 3px 2px 0px;
-  color: #55565a;
-  text-transform: uppercase;
-  font-weight: 700;
-  padding-left: 2em;
-  padding-right: 2em; }
-
 input[type=range] {
   height: 33px;
   -webkit-appearance: none;
@@ -751,6 +738,42 @@ input[type=range]:focus::-ms-fill-upper {
 .checkbox input[type="checkbox"]:focus + label::before {
   outline: #3b99fc auto 5px; }
 
+.sort fieldset {
+  border: 0px;
+  padding: 0;
+  margin: 0; }
+  .sort fieldset::after {
+    position: relative;
+    content: 'unfold_more';
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-weight: 900;
+    right: 1.5em;
+    top: 0.2em;
+    color: #24b5c9; }
+  .sort fieldset select {
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    padding: .5em;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.0470588) 0px 2px 5px 0px; }
+
+.btn-main {
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fbdd0f;
+  box-shadow: #dec204 0px 2px 0px 0px, rgba(0, 0, 0, 0.2) 0px 3px 2px 0px;
+  color: #55565a;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-left: 2em;
+  padding-right: 2em; }
+
+.full-width {
+  width: 100%; }
+
 article {
   border-radius: 7px;
   border: 1px solid #ededed;
@@ -797,10 +820,12 @@ aside {
   padding-top: 1em; }
   aside label.filter {
     border-radius: 5px;
-    background: #ededed;
+    border: 1px solid #ededed;
     display: block;
     padding: 0.5em;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.0470588) 0px 2px 5px 0px; }
     aside label.filter:hover {
       background: #c8c8c8; }
     aside label.filter:focus {
@@ -811,7 +836,8 @@ aside {
       font-weight: normal;
       font-style: normal;
       float: right;
-      top: 0; }
+      top: 0;
+      color: #24b5c9; }
   aside form {
     display: none;
     background: #fff;
@@ -848,7 +874,7 @@ input[type=checkbox]:default ~ form {
   display: none;
   opacity: 0; }
 
-form.filter select {
+form.sort select {
   -webkit-appearance: none; }
 
 /*# sourceMappingURL=main.css.map */
