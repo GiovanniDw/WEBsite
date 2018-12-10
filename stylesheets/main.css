@@ -837,7 +837,8 @@ aside {
       aside label.filter {
         background: none;
         box-shadow: none;
-        border: 0; } }
+        border: 0;
+        font-weight: bold; } }
     aside label.filter:hover {
       background: #c8c8c8; }
       @media (min-width: 50.0625em) {
