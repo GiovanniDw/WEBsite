@@ -38,12 +38,21 @@ aside {
 		background: #fff;
 		box-shadow: $shadow;
 
+@include respond-to('medium'){
+	background: none;
+	box-shadow:none;
+	border: 0;
+}
+
 		&:hover {
 			background: $mid-grey;
+@include respond-to('medium'){
+	background:none;
+}
 		}
 
 		&:focus {
-			background: #000;
+
 		}
 
 		&::after {
@@ -54,6 +63,11 @@ aside {
 			float: right;
 			top: 0;
 			color: $mid-blue;
+@include respond-to('medium'){
+	content: '';
+}
+
+
 		}
 	}
 
@@ -63,14 +77,20 @@ aside {
 		padding-top: 10px;
 		height: 0;
 		margin-top: 1em;
-	}
-
-	form {
 		border: 1px solid $light-grey;
 		border-radius: 5px;
 		margin-bottom: 20px;
 		box-shadow: $shadow;
+
+		@include respond-to('medium'){
+			display: block;
+			opacity: 1;
+			height: auto;
+		}
+
 	}
+
+
 
 	fieldset {
 		border: 0;
@@ -88,6 +108,7 @@ main {
 	// margin-left: 20px;
 }
 
+
 input[type=range] {
 	width: 100%;
 	-webkit-appearance: none;
@@ -96,6 +117,10 @@ input[type=range] {
 input[type=checkbox] {
 	-webkit-appearance: none;
 	display: none;
+
+
+
+
 }
 
 input[type=checkbox]:checked ~ form {
@@ -107,6 +132,14 @@ input[type=checkbox]:checked ~ form {
 input[type=checkbox]:default ~ form {
 	display: none;
 	opacity: 0;
+
+	@include respond-to('medium'){
+		display: block;
+		opacity: 1;
+		height: auto;
+	}
+
+
 }
 
 form.sort{

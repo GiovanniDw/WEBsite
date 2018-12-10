@@ -550,7 +550,7 @@ body {
   flex-direction: column;
   justify-content: space-between; }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 50.0625em) {
   .container-flex {
     flex-direction: row; }
     .container-flex aside {
@@ -565,11 +565,9 @@ body {
   justify-content: space-between;
   flex: 0 1 auto; }
   .articles .article-item {
-    box-sizing: border-box; }
-  @media only screen and (min-width: 0em) {
-    .articles .article-item {
-      max-width: 100%;
-      flex-basis: 100%; } }
+    box-sizing: border-box;
+    max-width: 100%;
+    flex-basis: 100%; }
   @media only screen and (min-width: 37.5625em) {
     .articles .article-item {
       max-width: calc(50% - (0.875rem/2));
@@ -792,7 +790,8 @@ article {
   margin-bottom: 1em; }
   .article-item header {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex-grow: 1; }
     .article-item header h3 {
       flex-grow: 2; }
     .article-item header span {
@@ -834,10 +833,16 @@ aside {
     padding: 0.5em;
     background: #fff;
     box-shadow: rgba(0, 0, 0, 0.0470588) 0px 2px 5px 0px; }
+    @media (min-width: 50.0625em) {
+      aside label.filter {
+        background: none;
+        box-shadow: none;
+        border: 0; } }
     aside label.filter:hover {
       background: #c8c8c8; }
-    aside label.filter:focus {
-      background: #000; }
+      @media (min-width: 50.0625em) {
+        aside label.filter:hover {
+          background: none; } }
     aside label.filter::after {
       content: 'arrow_drop_down';
       font-family: 'Material Icons';
@@ -846,17 +851,24 @@ aside {
       float: right;
       top: 0;
       color: #24b5c9; }
+      @media (min-width: 50.0625em) {
+        aside label.filter::after {
+          content: ''; } }
   aside form {
     display: none;
     background: #fff;
     padding-top: 10px;
     height: 0;
-    margin-top: 1em; }
-  aside form {
+    margin-top: 1em;
     border: 1px solid #ededed;
     border-radius: 5px;
     margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.0470588) 0px 2px 5px 0px; }
+    @media (min-width: 50.0625em) {
+      aside form {
+        display: block;
+        opacity: 1;
+        height: auto; } }
   aside fieldset {
     border: 0;
     border-bottom: 1px solid #ededed; }
@@ -882,6 +894,11 @@ input[type=checkbox]:checked ~ form {
 input[type=checkbox]:default ~ form {
   display: none;
   opacity: 0; }
+  @media (min-width: 50.0625em) {
+    input[type=checkbox]:default ~ form {
+      display: block;
+      opacity: 1;
+      height: auto; } }
 
 form.sort select {
   -webkit-appearance: none;

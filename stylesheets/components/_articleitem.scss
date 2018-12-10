@@ -28,6 +28,7 @@ margin-bottom: 1em;
 			header{
 				display: flex;
 				justify-content: space-between;
+				flex-grow: 1;
 				h3{
 					flex-grow:2;
 				}
