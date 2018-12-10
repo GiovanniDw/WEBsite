@@ -182,11 +182,12 @@ position: relative;
 
   select{
 border: 1px solid $light-grey;
-border-radius: 4px;
+border-radius: 5px;
 padding: .5em;
 background: #fff;
 box-shadow: $shadow;
-
+color: #4a4a4a;
+font-family: inherit;
 
   }
 }

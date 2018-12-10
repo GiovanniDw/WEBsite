@@ -8,7 +8,9 @@ article {
 	//margin: 10px;
 	border: 1px solid $light-grey;
 	box-shadow: $shadow;
-
+display: flex;
+flex-direction: column;
+align-items: stretch;
 	header,footer{
 		padding: 1em;
 	}
@@ -21,13 +23,24 @@ article {
 .article-item{
 background: #fff;
 margin-bottom: 1em;
+
+
 			header{
 				display: flex;
 				justify-content: space-between;
+				h3{
+					flex-grow:2;
+				}
+				span{
+					text-align: center;
+					font-size: small;
+				}
 			}
 			footer{
+
 				display: flex;
 				justify-content:space-between;
+
 
 				&:first-child{
 					flex-grow: 2;
