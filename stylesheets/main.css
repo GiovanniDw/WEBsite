@@ -473,7 +473,7 @@ select {
  * 3. Leave some space on the edges, especially valuable on small screens
  */
 .container {
-  max-width: 1180px;
+  /* max-width: 1180px; */
   /* 1 */
   margin-left: auto;
   /* 2 */
@@ -484,7 +484,8 @@ select {
   padding-right: 1em;
   /* 3 */
   width: 100%;
-  /* 1 */ }
+  /* 1 */
+  }
 
 /**
  * Hide text while making it readable for screen readers
