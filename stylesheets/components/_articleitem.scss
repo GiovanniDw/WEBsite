@@ -1,50 +1,52 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the article component.
 // -----------------------------------------------------------------------------
-article {
 
+article {
 	border-radius: 7px;
 	//padding: 20px;
 	//margin: 10px;
 	border: 1px solid $light-grey;
 	box-shadow: $shadow;
-display: flex;
-flex-direction: column;
-align-items: stretch;
-	header,footer{
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+
+	footer,
+	header {
 		padding: 1em;
 	}
-	.article-img{
+
+	.article-img {
 		border-radius: 7px 7px 0 0;
 	}
-
 }
 
-.article-item{
-background: #fff;
-margin-bottom: 1em;
+.article-item {
+	background: #fff;
+	margin-bottom: 1em;
 
+	header {
+		display: flex;
+		justify-content: space-between;
+		flex-grow: 1;
 
-			header{
-				display: flex;
-				justify-content: space-between;
-				flex-grow: 1;
-				h3{
-					flex-grow:2;
-				}
-				span{
-					text-align: center;
-					font-size: small;
-				}
-			}
-			footer{
-
-				display: flex;
-				justify-content:space-between;
-
-
-				&:first-child{
-					flex-grow: 2;
-				}
-			}
+		h3 {
+			flex-grow: 2;
 		}
+
+		span {
+			text-align: center;
+			font-size: small;
+		}
+	}
+
+	footer {
+		display: flex;
+		justify-content: space-between;
+
+		&:first-child {
+			flex-grow: 2;
+		}
+	}
+}
