@@ -29,7 +29,7 @@
 aside {
 	padding-top: 1em;
 
-	label.filter {
+	h3.filters {
 		border-radius: 5px;
 		border: 1px solid $light-grey;
 		display: block;
@@ -68,19 +68,42 @@ aside {
 	}
 
 	form {
-		display: none;
+
 		background: #fff;
-		padding-top: 10px;
+
 		height: 0;
-		margin-top: 1em;
-		border: 1px solid $light-grey;
-		border-radius: 5px;
-		margin-bottom: 20px;
-		box-shadow: $shadow;
+		overflow: hidden;
+
+
+		opacity: 0;
+
+		transition: 0.3s cubic-bezier(.2, 0, 0, 1.6);
+
+&.show-filters{
+
+	background: #fff;
+	height: auto;
+	opacity: 1;
+	padding-top: 10px;
+margin-top: 1em;
+border: 1px solid $light-grey;
+border-radius: 5px;
+
+box-shadow: $shadow;
+
+}
+
 		@include respond-to('medium') {
 			display: block;
 			opacity: 1;
 			height: auto;
+			padding-top: 10px;
+	margin-top: 1em;
+	border: 1px solid $light-grey;
+	border-radius: 5px;
+
+	box-shadow: $shadow;
+
 		}
 	}
 
@@ -131,4 +154,14 @@ form.sort {
 		-webkit-appearance: none;
 		font-family: inherit;
 	}
+}
+
+section.active-filter-container{
+display: block;
+height: auto;
+}
+.selected-filter{
+	width: auto;
+	border: 1px solid $light-blue ;
+	padding: .5em;
 }

@@ -31,12 +31,12 @@
   <div class="container-flex container">
 
     <aside>
-      <input type="checkbox" id="filter" name="filter" value="filter">
-      <label class="filter" for="filter">Verfijn resultaten</label>
+      <!-- <input type="checkbox" id="filter" name="filter" value="filter">
+      <label class="filter" for="filter">Verfijn resultaten</label> -->
+<h3 class="filters">Verfijn resultaten</h3>
 
 
-
-      <form action="#">
+      <form class="" action="#">
         <fieldset>
           <legend>
             <h4>Leestijd</h4>
@@ -122,7 +122,11 @@
         </form>
         <p><small>21 van de 99 items</small></p>
       </section>
-      <section>geselecteerde filters</section>
+      <section class="active-filter-container">
+        <span class="selected-filter">Alle genres</span>
+        <span class="selected-filter">Alle genres</span>
+
+      </section>
       <section class="articles">
         <article class="article-item">
           <img alt="Hilton London Kensington" class="article-img" srcset="https://packages-assets.eurostar.com/imageRepo/4/0/54/483/860/LHRHITW_LHRHI_Exterior_6529_J.jpg?auto=format&amp;dpr=2&amp;fm=pjpg&amp;crop=faces&amp;fit=crop&amp;w=450&amp;h=260&amp;ixlib=react-7.2.0 2x, https://packages-assets.eurostar.com/imageRepo/4/0/54/483/860/LHRHITW_LHRHI_Exterior_6529_J.jpg?auto=format&amp;dpr=3&amp;fm=pjpg&amp;crop=faces&amp;fit=crop&amp;w=450&amp;h=260&amp;ixlib=react-7.2.0 3x"
@@ -160,6 +164,8 @@
               <a href="#"><i class="material-icons">
                   save_alt
                 </i></a>
+
+
             </div>
           </footer>
         </article>
@@ -206,6 +212,7 @@
       </section>
   </div>
   </main>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

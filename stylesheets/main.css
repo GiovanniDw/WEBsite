@@ -484,8 +484,7 @@ select {
   padding-right: 1em;
   /* 3 */
   width: 100%;
-  /* 1 */
-  }
+  /* 1 */ }
 
 /**
  * Hide text while making it readable for screen readers
@@ -828,7 +827,7 @@ article {
 
 aside {
   padding-top: 1em; }
-  aside label.filter {
+  aside h3.filters {
     border-radius: 5px;
     border: 1px solid #ededed;
     display: block;
@@ -836,18 +835,18 @@ aside {
     background: #fff;
     box-shadow: rgba(0, 0, 0, 0.0470588) 0px 2px 5px 0px; }
     @media (min-width: 50.0625em) {
-      aside label.filter {
+      aside h3.filters {
         background: none;
         box-shadow: none;
         border: 0;
         font-weight: bold;
         font-size: 1.25em; } }
-    aside label.filter:hover {
+    aside h3.filters:hover {
       background: #c8c8c8; }
       @media (min-width: 50.0625em) {
-        aside label.filter:hover {
+        aside h3.filters:hover {
           background: none; } }
-    aside label.filter::after {
+    aside h3.filters::after {
       content: 'arrow_drop_down';
       font-family: 'Material Icons';
       font-weight: normal;
@@ -856,23 +855,33 @@ aside {
       top: 0;
       color: #24b5c9; }
       @media (min-width: 50.0625em) {
-        aside label.filter::after {
+        aside h3.filters::after {
           content: ''; } }
   aside form {
-    display: none;
     background: #fff;
-    padding-top: 10px;
     height: 0;
-    margin-top: 1em;
-    border: 1px solid #ededed;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    box-shadow: rgba(0, 0, 0, 0.0470588) 0px 2px 5px 0px; }
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s cubic-bezier(0.2, 0, 0, 1.6); }
+    aside form.show-filters {
+      background: #fff;
+      height: auto;
+      opacity: 1;
+      padding-top: 10px;
+      margin-top: 1em;
+      border: 1px solid #ededed;
+      border-radius: 5px;
+      box-shadow: rgba(0, 0, 0, 0.0470588) 0px 2px 5px 0px; }
     @media (min-width: 50.0625em) {
       aside form {
         display: block;
         opacity: 1;
-        height: auto; } }
+        height: auto;
+        padding-top: 10px;
+        margin-top: 1em;
+        border: 1px solid #ededed;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.0470588) 0px 2px 5px 0px; } }
   aside fieldset {
     border: 0;
     border-bottom: 1px solid #ededed; }
@@ -907,5 +916,14 @@ input[type=checkbox]:default ~ form {
 form.sort select {
   -webkit-appearance: none;
   font-family: inherit; }
+
+section.active-filter-container {
+  display: block;
+  height: auto; }
+
+.selected-filter {
+  width: auto;
+  border: 1px solid #a8e2ea;
+  padding: .5em; }
 
 /*# sourceMappingURL=main.css.map */
