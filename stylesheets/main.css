@@ -918,12 +918,14 @@ form.sort select {
   font-family: inherit; }
 
 section.active-filter-container {
-  display: block;
+  display: flex;
   height: auto; }
 
 .selected-filter {
   width: auto;
   border: 1px solid #a8e2ea;
   padding: .5em; }
+  .selected-filter:after {
+    content: 'x'; }
 
 /*# sourceMappingURL=main.css.map */

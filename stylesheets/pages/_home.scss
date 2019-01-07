@@ -157,11 +157,17 @@ form.sort {
 }
 
 section.active-filter-container{
-display: block;
+display: flex;
+
 height: auto;
+
 }
 .selected-filter{
 	width: auto;
 	border: 1px solid $light-blue ;
 	padding: .5em;
+
+	&:after{
+		content:'x';
+	}
 }
