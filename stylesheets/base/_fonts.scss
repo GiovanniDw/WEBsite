@@ -5,3 +5,29 @@
 
 
 @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+@font-face {
+    font-family: AspectDemo;
+    font-weight: normal;
+    src: url(../fonts/DemoAspect-Rg.otf) format("opentype");
+}
+@font-face {
+    font-family: AspectDemo;
+    font-weight:lighter;
+    src: url(../fonts/DemoAspect-Lt.otf) format("opentype");
+}
+@font-face {
+    font-family: PembrokeDemo;
+    font-weight: lighter;
+    src: url(../fonts/DemoPembroke-Light.otf) format("opentype");
+}
+@font-face {
+    font-family: PembrokeDemo;
+    font-weight: bold;
+    src: url(../fonts/DemoPembroke-Medium.otf) format("opentype");
+}
+@font-face {
+    font-family: PembrokeDemo;
+    font-weight: normal;
+    src: url(../fonts/DemoPembroke-Regular.otf) format("opentype");
+}

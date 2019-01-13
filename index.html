@@ -14,8 +14,8 @@
       <div class="logo"><a href=""><img class="c-navigation__logo-image" src="https://static.eurostar.com/shared/images/logos/logo.svg" alt="Eurostar Homepage"></a></div>
       <nav>
         <ul>
-          <li><a href="#"><i class="material-icons md-dark">favorite</i></a></li>
-          <li><a href="#"><i class="material-icons md-dark">person</i></a>
+          <li><a href="#"><i class="material-icons md-dark">favorite</i>Mijn Lijst</a></li>
+          <li><a href="#"><i class="material-icons md-dark">person</i>Inloggen/Regristreren</a>
           </li>
         </ul>
       </nav>
@@ -33,13 +33,13 @@
     <aside>
       <!-- <input type="checkbox" id="filter" name="filter" value="filter">
       <label class="filter" for="filter">Verfijn resultaten</label> -->
-<h3 class="filters">Verfijn resultaten</h3>
+<h3 class="filters">Verhalen Filteren</h3>
 
 
       <form class="" action="#">
         <fieldset>
           <legend>
-            <h4>Leestijd</h4>
+            <h4>Hoeveel tijd heb je?</h4>
           </legend>
           <input type="range" multiple min="0" max="10" value="1" step="1">
         </fieldset>
@@ -48,51 +48,51 @@
 
         <fieldset class="genres">
           <legend>
-            <h4>Genre</h4>
+            <h4>Kies je Genre(s)</h4>
           </legend>
           <div class="checkbox">
             <input type="checkbox" name="alles" value="all" id="alle-genres" checked>
-            <label for="alle-genres">Alle Genres</label>
+            <label for="alle-genres">Alle Genres (99)</label>
           </div>
           <div class="checkbox">
             <input type="checkbox" name="genre" value="twee" id="twee">
-            <label for="twee">Opinie</label>
+            <label for="twee">Avontuur (1)</label>
           </div>
           <div class="checkbox">
             <input type="checkbox" name="genre" value="drie" id="drie">
-            <label for="drie">drie</label>
+            <label for="drie">Detective (1)</label>
           </div>
           <div class="checkbox">
             <input type="checkbox" name="genre" value="vier" id="vier">
-            <label for="vier">vier</label>
+            <label for="vier">Griezel (1)</label>
           </div>
           <div class="checkbox">
             <input type="checkbox" name="genre" value="vijf" id="vijf">
-            <label for="vijf">vijf</label>
+            <label for="vijf">Humor (1)</label>
           </div>
           <div class="checkbox">
             <input type="checkbox" name="genre" value="zes" id="zes">
-            <label for="zes">zes</label>
+            <label for="zes">Psygologisch (1)</label>
           </div>
           <div class="checkbox">
             <input type="checkbox" name="genre" value="zeven" id="zeven">
-            <label for="zeven">zeven</label>
+            <label for="zeven">Romantisch</label>
           </div>
           <div class="checkbox">
             <input type="checkbox" name="genre" value="acht" id="acht">
-            <label for="acht">acht</label>
+            <label for="acht">Science Fiction (1)</label>
           </div>
           <div class="checkbox">
             <input type="checkbox" name="genre" value="negen" id="negen">
-            <label for="negen">negen</label>
+            <label for="negen">Spanning (1)</label>
           </div>
           <div class="checkbox">
             <input type="checkbox" name="genre" value="tien" id="tien">
-            <label for="tien">tien</label>
+            <label for="tien">Waargebeurt (1)</label>
           </div>
           <div class="checkbox">
             <input type="checkbox" name="genre" value="elf" id="elf">
-            <label for="elf">twee</label>
+            <label for="elf">Western (1)</label>
           </div>
           <input type="submit" value="filters toepassen" class="btn-main full-width">
         </fieldset>
@@ -112,17 +112,18 @@
 
             <select name="Sorteer op" id="">
               <option>Sorteer op</option>
-              <option value="Populariteit">Populariteit</option>
-              <option value="Alfabetisch">Alfabetisch</option>
-              <option value="Aanbevolen">Aanbevolen</option>
-              <option value="Nieuw">Nieuw</option>
-              <option value="Oud">Oud</option>
+              <option value="Populariteit">Meest Gewaardeert</option>
+              <option value="Alfabetischaz">Alfabetisch A-Z</option>
+              <option value="Alfabetischza">Alfabetisch Z-A</option>
+              <option value="Lengte Oplopend">Lengte Oplopend</option>
+              <option value="Lengte Aflopend">Lengte Aflopend</option>
             </select>
           </fieldset>
         </form>
         <p><small>21 van de 99 items</small></p>
       </section>
       <section class="active-filter-container">
+        <!-- <p>Filter(s):</p> -->
         <span class="selected-filter">Alle genres</span>
         <span class="selected-filter">Alle genres</span>
 

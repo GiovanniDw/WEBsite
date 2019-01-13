@@ -433,21 +433,44 @@ a {
 img {
   width: 100%; }
 
+@font-face {
+  font-family: AspectDemo;
+  font-weight: normal;
+  src: url(../fonts/DemoAspect-Rg.otf) format("opentype"); }
+@font-face {
+  font-family: AspectDemo;
+  font-weight: lighter;
+  src: url(../fonts/DemoAspect-Lt.otf) format("opentype"); }
+@font-face {
+  font-family: PembrokeDemo;
+  font-weight: lighter;
+  src: url(../fonts/DemoPembroke-Light.otf) format("opentype"); }
+@font-face {
+  font-family: PembrokeDemo;
+  font-weight: bold;
+  src: url(../fonts/DemoPembroke-Medium.otf) format("opentype"); }
+@font-face {
+  font-family: PembrokeDemo;
+  font-weight: normal;
+  src: url(../fonts/DemoPembroke-Regular.otf) format("opentype"); }
 /**
  * Basic typography style for copy text
  */
 body {
   color: #4a4a4a;
-  font: normal 100%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font: normal 100%/1.4 "PembrokeDemo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0; }
 
 h1 {
-  font-size: 3.5em; }
+  font-size: 3.5em;
+  font-family: AspectDemo;
+  font-weight: normal; }
 
 h2 {
-  font-size: 2.5em; }
+  font-size: 2.5em;
+  font-family: "AspectDemo"; }
 
 h3 {
   font-size: 1.4em; }
@@ -456,7 +479,7 @@ h4 {
   font-size: 1.25em; }
 
 select {
-  font: normal 100%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font: normal 100%/1.4 "PembrokeDemo", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
 /**
  * Clear inner floats
