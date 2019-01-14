@@ -12,9 +12,12 @@ article {
 	flex-direction: column;
 	align-items: stretch;
 
-	footer,
-	header {
-		padding: 1em;
+	header{
+		padding: 1em 1em .5em 1em;
+
+	}
+	footer{
+padding: .5em 1em 1em 1em;
 	}
 
 	.article-img {
@@ -36,10 +39,26 @@ flex-grow: 1;
 			justify-content: space-between;
 			flex-grow: 1;
 
+			span{
+				display: flex;
+				flex-direction: column;
+			}
+
 		}
 		.header-bottom{
-			
 
+p{
+	clear: both;
+
+	.active-genre{
+		border: 1px solid $mid-blue;
+		padding: 0.4em 1em;
+		border-radius: 10em / 10em;
+		background: $mid-blue;
+		color: white;
+		margin-right: 0.5em;
+	}
+}
 		}
 
 		h3 {
@@ -142,3 +161,51 @@ flex-grow: 1;
   }
 }
 }
+
+
+
+
+
+
+
+
+
+
+.rating {
+  border: none;
+  float:left;
+	margin: 0;
+	padding: 0;
+
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+  margin: 0em 0.5em 0.5em 0;
+  font-size: 1.25em;
+  font-family: Material Icons;
+  display: inline-block;
+  content: "star";
+}
+
+// .rating > .half:before {
+//   content: "star";
+//   position: absolute;
+// }
+
+.rating > label {
+  color: #ddd;
+ float: right;
+
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
