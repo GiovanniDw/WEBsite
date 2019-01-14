@@ -12,7 +12,11 @@
 			font-weight: 700;
 			padding-left: 2em;
 			padding-right: 2em;
+&:hover{
+	background-color: lighten($yellow, 10%);
+}
 		}
 .full-width{
 	width: 100%;
+	font-size: 80%;
 }

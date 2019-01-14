@@ -11,11 +11,11 @@
 <body>
   <header class="main-header">
     <div class="container-header container">
-      <div class="logo"><a href=""><img class="c-navigation__logo-image" src="https://static.eurostar.com/shared/images/logos/logo.svg" alt="Eurostar Homepage"></a></div>
+      <div class="logo"><a href="index.html"><img class="c-navigation__logo-image" src="https://static.eurostar.com/shared/images/logos/logo.svg" alt="Eurostar Homepage"></a></div>
       <nav>
         <ul>
-          <li><a href="#"><i class="material-icons md-dark">favorite</i>Mijn Lijst</a></li>
-          <li><a href="#"><i class="material-icons md-dark">person</i>Inloggen/Regristreren</a>
+          <li><a class="fav" href="#"></a></li>
+          <li><a class="acc" href="account.html"></a>
           </li>
         </ul>
       </nav>
@@ -41,7 +41,19 @@
           <legend>
             <h4>Hoeveel tijd heb je?</h4>
           </legend>
-          <input type="range" multiple min="0" max="10" value="1" step="1">
+          <!-- <input type="range" multiple min="0" max="10" value="1" step="1"> -->
+          <div class="radio">
+            <input type="radio" name="tijd" value="all" id="alle-tijd" checked>
+            <label for="alle-tijd">Alle Tijd</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="tijd" value="twee" id="minderdan5">
+            <label for="minderdan5">Minder dan 5 min</label>
+          </div>
+          <div class="radio">
+            <input type="radio" name="tijd" value="drie" id="meerdan5">
+            <label for="meerdan5">Meer dan 5 min</label>
+          </div>
         </fieldset>
 
 
@@ -123,9 +135,9 @@
         <p><small>21 van de 99 items</small></p>
       </section>
       <section class="active-filter-container">
-        <!-- <p>Filter(s):</p> -->
-        <span class="selected-filter">Alle genres</span>
-        <span class="selected-filter">Alle genres</span>
+        <p>Filter(s):</p>
+        <span class="selected-filter">Avontuur</span>
+        <span class="selected-filter">Detective</span>
 
       </section>
       <section class="articles">
@@ -133,19 +145,23 @@
           <img alt="Hilton London Kensington" class="article-img" srcset="https://packages-assets.eurostar.com/imageRepo/4/0/54/483/860/LHRHITW_LHRHI_Exterior_6529_J.jpg?auto=format&amp;dpr=2&amp;fm=pjpg&amp;crop=faces&amp;fit=crop&amp;w=450&amp;h=260&amp;ixlib=react-7.2.0 2x, https://packages-assets.eurostar.com/imageRepo/4/0/54/483/860/LHRHITW_LHRHI_Exterior_6529_J.jpg?auto=format&amp;dpr=3&amp;fm=pjpg&amp;crop=faces&amp;fit=crop&amp;w=450&amp;h=260&amp;ixlib=react-7.2.0 3x"
             src="https://packages-assets.eurostar.com/imageRepo/4/0/54/483/860/LHRHITW_LHRHI_Exterior_6529_J.jpg?auto=format&amp;dpr=1&amp;fm=pjpg&amp;crop=faces&amp;fit=crop&amp;w=450&amp;h=260&amp;ixlib=react-7.2.0">
           <header>
+            <div class="header-top">
             <h3>Poepen</h3>
             <span><i class="material-icons md-dark">access_time</i><br><time>5min</time></span>
+            </div>
+            <div class="header-bottom">
+              <p>rating</p>
+              <p>genres</p>
+            </div>
           </header>
 
           <footer>
             <a href="verhalen/artikel/index.html">Lees veder</a>
-            <div>
+            <div class="favorite">
               <input type="checkbox" id="favorite" name="favorite" value="favorite">
-              <label class="favorite material-icons" for="favorite">favorite</label>
+              <label  for="favorite"></label>
 
-              <a href="#"><i class="material-icons">
-                  save_alt
-                </i></a>
+
             </div>
           </footer>
         </article>
@@ -159,12 +175,9 @@
 
           <footer>
             <a href="verhalen/artikel/index.html">Lees veder</a>
-            <div>
-              <input type="checkbox" id="favorite" name="favorite" value="favorite">
-              <label class="favorite material-icons" for="favorite">favorite</label>
-              <a href="#"><i class="material-icons">
-                  save_alt
-                </i></a>
+            <div class="favorite">
+              <input type="checkbox" id="favorite2" name="favorite" value="favorite">
+              <label  for="favorite2"></label>
 
 
             </div>
@@ -181,12 +194,11 @@
 
           <footer>
             <a href="verhalen/artikel/index.html">Lees veder</a>
-            <div>
-              <input type="checkbox" id="favorite" name="favorite" value="favorite">
-              <label class="favorite material-icons" for="favorite">favorite</label>
-              <a href="#"><i class="material-icons">
-                  save_alt
-                </i></a>
+            <div class="favorite">
+              <input type="checkbox" id="favorite3" name="favorite" value="favorite">
+              <label  for="favorite3"></label>
+
+
             </div>
           </footer>
         </article>
@@ -200,12 +212,11 @@
 
           <footer>
             <a href="verhalen/artikel/index.html">Lees veder</a>
-            <div>
-              <input type="checkbox" id="favorite" name="favorite" value="favorite">
-              <label class="favorite material-icons" for="favorite">favorite</label>
-              <a href="#"><i class="material-icons">
-                  save_alt
-                </i></a>
+            <div class="favorite">
+              <input type="checkbox" id="favorite4" name="favorite" value="favorite">
+              <label  for="favorite4"></label>
+
+
             </div>
           </footer>
         </article>

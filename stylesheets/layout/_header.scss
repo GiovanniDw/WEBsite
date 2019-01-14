@@ -43,7 +43,33 @@
         display: block;
         padding-left: 10px;
         padding-right: 10px;
+
+
       }
     }
   }
+}
+
+.fav{
+
+
+  &:before{
+    content:'favorite';
+    font-family: 'Material Icons';
+  }
+  &:after{@include respond-to('medium') {
+    content:'Mijn Lijst';
+  }
+  }
+}
+.acc{
+  &:before{
+    content:'person';
+    font-family: 'Material Icons';
+  }
+  &:after{@include respond-to('medium') {
+    content:'Inloggen/Regristreren';
+  }
+  }
+
 }
