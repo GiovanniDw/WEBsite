@@ -1114,8 +1114,8 @@ section.active-filter-container {
 .login {
   border: 1px solid #ededed;
   border-radius: 5px;
-  margin: 0 auto;
-  width: 25em;
+  margin: 2em auto;
+  width: 20em;
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -1125,10 +1125,24 @@ section.active-filter-container {
     margin-top: 1em;
     text-align: center; }
 
-input[type="email"], input[type="password"] {
+input[type="email"],
+input[type="password"] {
   border: 1px solid #24b5c9;
   border-radius: 5px;
-  padding: .7em; }
+  padding: 0.7em; }
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    outline: 0;
+    background: white; }
+  input[type="email"]:default,
+  input[type="password"]:default {
+    border-color: #24b5c9; }
+  input[type="email"]:valid:not(:focus):not(:placeholder-shown),
+  input[type="password"]:valid:not(:focus):not(:placeholder-shown) {
+    border-color: green; }
+  input[type="email"]:invalid:not(:focus):not(:placeholder-shown),
+  input[type="password"]:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: red; }
 
 input[type="password"] {
   margin-bottom: 1em; }

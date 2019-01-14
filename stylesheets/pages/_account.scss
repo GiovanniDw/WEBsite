@@ -1,34 +1,57 @@
-.account-page{
+.account-page {
   background-color: $light-blue;
 
-  h1{
+  h1 {
     text-align: center;
     color: $dark-blue;
   }
 }
+
 .login {
   border: 1px solid $light-grey;
   border-radius: 5px;
-margin: 0 auto;
-  width: 25em;
+  margin: 2em auto;
+  width: 20em;
   padding: 1em;
   display: flex;
-flex-direction: column;
-background: white;
-justify-content: space-between;
-a{
-  margin-top: 1em;
-  text-align: center;
+  flex-direction: column;
+  background: white;
+  justify-content: space-between;
 
-
-}
+  a {
+    margin-top: 1em;
+    text-align: center;
   }
+}
 
-input[type="email"],input[type="password"]{
+input[type="email"],
+input[type="password"] {
   border: 1px solid $mid-blue;
   border-radius: 5px;
-  padding: .7em;
+  padding: 0.7em;
+
+  &:focus {
+
+          // removing default focus style
+          outline: 0;
+          // adding new one
+          background: white;
+
+
+
+
+        }
+&:default{
+  border-color: $mid-blue;
 }
-input[type="password"]{
-margin-bottom: 1em;
+  &:valid:not(:focus):not(:placeholder-shown) {
+border-color: green;
+  }
+  &:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: red;
+  }
+}
+
+input[type="password"] {
+  margin-bottom: 1em;
 }
