@@ -100,27 +100,29 @@ input[type=range]:focus::-ms-fill-upper {
   background: $light-blue;
 }
 
-.checkbox input[type="checkbox"] {
+
+.checkbox-container input[type="checkbox"] {
   opacity: 0;
 }
 
-.checkbox label {
+.checkbox-container label {
   position: relative;
   display: inline-block;
   margin-bottom: 1em;
+  cursor: pointer;
   /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
   padding-left: 1.6em;
 }
 
-.checkbox label::after,
-.checkbox label::before {
+.checkbox-container label::after,
+.checkbox-container label::before {
   position: absolute;
   content: "";
   /*Needed for the line-height to take effect*/
   display: inline-block;
 }
 /*Outer box of the fake checkbox*/
-.checkbox label::before {
+.checkbox-container label::before {
   height: 1.3em;
   width: 1.3em;
   border: 1px solid $light-blue;
@@ -132,7 +134,7 @@ input[type=range]:focus::-ms-fill-upper {
   //  top: 3px;
 }
 /*Checkmark of the fake checkbox*/
-.checkbox label::after {
+.checkbox-container label::after {
   content: 'done';
   font-family: 'Material Icons';
   font-weight: normal;
@@ -148,18 +150,20 @@ input[type=range]:focus::-ms-fill-upper {
   top: -6px;
 }
 /*Hide the checkmark by default*/
-.checkbox input[type="checkbox"] + label::after {
+.checkbox-container input[type="checkbox"] + label::after {
   content: none;
 }
 /*Unhide on the checked state*/
-.checkbox input[type="checkbox"]:checked + label::after {
+.checkbox-container input[type="checkbox"]:checked + label::after {
   content: "done";
   color: $mid-blue;
 }
 /*Adding focus styles on the outer-box of the fake checkbox*/
-.checkbox input[type="checkbox"]:focus + label::before {
+.checkbox-container input[type="checkbox"]:focus + label::before {
   outline: rgb(59, 153, 252) auto 5px;
 }
+
+
 
 //RADIOO
 
