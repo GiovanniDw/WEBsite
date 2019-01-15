@@ -10,10 +10,10 @@
 	/* Do not repeat the image */
 	background-size: cover;
 	background-image: url("https://content-static.eurostar.com/styles/1600x420/s3/2018-10/Christmas-in-London.jpg");
-
 	@include respond-to('medium') {
-	padding: 4em 0em 4em 20px;
+		padding: 4em 0 4em 20px;
 	}
+
 	h1 {
 		color: #fff;
 		text-shadow: rgba(0, 0, 0, 0.6) 0 0 6px;
@@ -23,7 +23,6 @@
 		color: rgb(255, 255, 255);
 		text-shadow: rgba(0, 0, 0, 0.6) 0 0 6px;
 		line-height: 1.5;
-		
 		font-size: 36px;
 		text-transform: uppercase;
 		padding-bottom: 22px;
@@ -47,14 +46,12 @@ aside {
 			font-weight: bold;
 			font-size: 1.25em;
 		}
-
-		&:hover {
-			background: $mid-grey;
-			@include respond-to('medium') {
-				background: none;
-			}
-		}
-
+		// &:hover {
+		// 	background: $mid-grey;
+		// 	@include respond-to('medium') {
+		// 		background: none;
+		// 	}
+		// }
 		&:focus {}
 
 		&::after {
@@ -72,42 +69,29 @@ aside {
 	}
 
 	form {
-
 		background: #fff;
-
 		height: 0;
 		overflow: hidden;
-
-
 		opacity: 0;
-
 		transition: 0.3s cubic-bezier(.2, 0, 0, 1.6);
 
-&.show-filters{
-
-	background: #fff;
-	height: auto;
-	opacity: 1;
-	padding-top: 10px;
-//margin-top: 1em;
-border: 1px solid $light-grey;
-border-radius: 0 0 5px 5px;
-
-box-shadow: $shadow;
-
-}
-
+		&.show-filters {
+			background: #fff;
+			height: auto;
+			opacity: 1;
+			padding-top: 10px; //margin-top: 1em;
+			border: 1px solid $light-grey;
+			border-radius: 0 0 5px 5px;
+			box-shadow: $shadow;
+		}
 		@include respond-to('medium') {
 			display: block;
 			opacity: 1;
 			height: auto;
 			padding-top: 10px;
-	//margin-top: 1em;
-	border: 1px solid $light-grey;
-
-
-	box-shadow: $shadow;
-
+			//margin-top: 1em;
+			border: 1px solid $light-grey;
+			box-shadow: $shadow;
 		}
 	}
 
@@ -136,6 +120,7 @@ input[type=checkbox] {
 	-webkit-appearance: none;
 	display: none;
 }
+
 input[type=radio] {
 	-webkit-appearance: none;
 	display: none;
@@ -164,27 +149,25 @@ form.sort {
 	}
 }
 
-section.active-filter-container{
-display: flex;
-
-height: auto;
-align-items: baseline;
-
+section.active-filter-container {
+	display: flex;
+	height: auto;
+	align-items: baseline;
 }
-.selected-filter{
+
+.selected-filter {
 	width: auto;
-	border: 1px solid $mid-blue ;
-	padding: .5em;
+	border: 1px solid $mid-blue;
+	padding: 0.5em;
 	border-radius: 0.3em;
-	margin: 1em .5em 1em .5em;
+	margin: 1em 0.5em;
 
-
-	&:after{
-		content:'close';
+	&:after {
+		content: 'close';
 		font-family: 'Material Icons';
-
 		color: $mid-blue;
-		&:hover{
+
+		&:hover {
 			color: $dark-blue;
 		}
 	}

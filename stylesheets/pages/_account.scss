@@ -26,7 +26,7 @@
 
 input[type="email"],
 input[type="password"] {
-  border: 1px solid $mid-blue;
+  border: 1px solid $light-blue;
   border-radius: 5px;
   padding: 0.7em;
 
@@ -36,7 +36,7 @@ input[type="password"] {
           outline: 0;
           // adding new one
           background: white;
-
+border:1px solid $mid-blue;
 
 
 

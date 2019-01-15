@@ -789,7 +789,8 @@ input[type=range]:focus::-ms-fill-upper {
   display: inline-block;
   margin-bottom: 1em;
   /*16px width of fake radio + 6px distance between fake radio and text*/
-  padding-left: 1.6em; }
+  padding-left: 1.6em;
+  cursor: pointer; }
 
 .radio label::after,
 .radio label::before {
@@ -1031,7 +1032,7 @@ article {
   background-image: url("https://content-static.eurostar.com/styles/1600x420/s3/2018-10/Christmas-in-London.jpg"); }
   @media (min-width: 50.0625em) {
     .hero {
-      padding: 4em 0em 4em 20px; } }
+      padding: 4em 0 4em 20px; } }
   .hero h1 {
     color: #fff;
     text-shadow: rgba(0, 0, 0, 0.6) 0 0 6px;
@@ -1058,11 +1059,6 @@ aside {
       aside h3.filters {
         font-weight: bold;
         font-size: 1.25em; } }
-    aside h3.filters:hover {
-      background: #c8c8c8; }
-      @media (min-width: 50.0625em) {
-        aside h3.filters:hover {
-          background: none; } }
     aside h3.filters::after {
       content: 'arrow_drop_down';
       font-family: 'Material Icons';
@@ -1143,9 +1139,9 @@ section.active-filter-container {
 .selected-filter {
   width: auto;
   border: 1px solid #24b5c9;
-  padding: .5em;
+  padding: 0.5em;
   border-radius: 0.3em;
-  margin: 1em .5em 1em .5em; }
+  margin: 1em 0.5em; }
   .selected-filter:after {
     content: 'close';
     font-family: 'Material Icons';
@@ -1175,13 +1171,14 @@ section.active-filter-container {
 
 input[type="email"],
 input[type="password"] {
-  border: 1px solid #24b5c9;
+  border: 1px solid #a8e2ea;
   border-radius: 5px;
   padding: 0.7em; }
   input[type="email"]:focus,
   input[type="password"]:focus {
     outline: 0;
-    background: white; }
+    background: white;
+    border: 1px solid #24b5c9; }
   input[type="email"]:default,
   input[type="password"]:default {
     border-color: #24b5c9; }
