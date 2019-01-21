@@ -9,9 +9,11 @@
 	background-repeat: no-repeat;
 	/* Do not repeat the image */
 	background-size: cover;
+	margin-top: 60px;
 	background-image: url("https://content-static.eurostar.com/styles/1600x420/s3/2018-10/Christmas-in-London.jpg");
 	@include respond-to('medium') {
 		padding: 4em 0 4em 20px;
+
 	}
 
 	h1 {
@@ -54,13 +56,14 @@ aside {
 		// }
 		&:focus {}
 
-		&::after {
+		&:after {
 			content: 'arrow_drop_down';
+			position: relative;
 			font-family: 'Material Icons';
 			font-weight: normal;
 			font-style: normal;
 			float: right;
-			top: 0;
+
 			color: $mid-blue;
 			@include respond-to('medium') {
 				content: '';

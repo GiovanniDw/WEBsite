@@ -3,12 +3,16 @@
 // -----------------------------------------------------------------------------
 
 .main-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
   background: $brand-color;
   color: $text-color-light;
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 60px;
+  z-index: 99999;
 
   a {
     color: $text-color-light;
@@ -43,22 +47,42 @@
         display: block;
         padding-left: 10px;
         padding-right: 10px;
-
+height: 60px  ;
+line-height: 3.5em;
+text-decoration: none;
+&:hover{
+  border-bottom: 2px solid $mid-blue;
+}
 
       }
     }
   }
 }
+.search{
 
+
+  &:before{
+    content:'search';
+    font-family: 'Material Icons';
+    font-size: 1.5em;
+    
+  }
+  &:after{@include respond-to('medium') {
+    content:'Zoeken';
+  }
+  }
+}
 .fav{
 
 
   &:before{
     content:'favorite';
     font-family: 'Material Icons';
+      font-size: 1.5em;
   }
   &:after{@include respond-to('medium') {
     content:'Mijn Lijst';
+
   }
   }
 }
@@ -66,6 +90,7 @@
   &:before{
     content:'person';
     font-family: 'Material Icons';
+      font-size: 1.5em;
   }
   &:after{@include respond-to('medium') {
     content:'Inloggen/Regristreren';
