@@ -64,8 +64,12 @@ text-decoration: none;
   &:before{
     content:'search';
     font-family: 'Material Icons';
-    font-size: 1.5em;
-    
+    font-size: 1.3em;
+    position: relative;
+    top: 5px;
+    left: -5px;
+
+
   }
   &:after{@include respond-to('medium') {
     content:'Zoeken';
@@ -76,9 +80,13 @@ text-decoration: none;
 
 
   &:before{
-    content:'favorite';
+    content:'list';
     font-family: 'Material Icons';
-      font-size: 1.5em;
+    font-size: 1.3em;
+    position: relative;
+    top: 5px;
+    left: -5px;
+
   }
   &:after{@include respond-to('medium') {
     content:'Mijn Lijst';
@@ -90,7 +98,11 @@ text-decoration: none;
   &:before{
     content:'person';
     font-family: 'Material Icons';
-      font-size: 1.5em;
+    font-size: 1.3em;
+    position: relative;
+    top: 5px;
+    left: -5px;
+
   }
   &:after{@include respond-to('medium') {
     content:'Inloggen/Regristreren';

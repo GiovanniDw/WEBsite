@@ -1,0 +1,281 @@
+.verhaal section{
+  font-family: 'Saira Semi Condensed', sans-serif;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  //border: 1px solid $dark-grey;
+z-index: 99;
+
+  h1{
+    position: fixed;
+    top:20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Saira Semi Condensed', sans-serif;
+    text-align: center;
+    z-index: 9999;
+span:nth-child(2) {
+    &::after{
+      content: "";
+      position: fixed;
+      border: 0 solid transparent;
+      border-top: 90px solid transparent;
+      border-right: 0px solid yellow;
+      border-bottom: 0px solid red;
+      border-left: 900px solid blue;
+      border-radius: 0 0 0 0;
+      top: 59px;
+      left: 0px;
+      width: 12px;
+      height: 100vh;
+      transform: rotate(0deg);
+    }
+}
+
+.t-1{
+color:white;
+}
+.t-2{
+color:#EE5846;
+}
+.t-3{
+color:#D29F2B;
+}
+.t-4{
+color:#006D84;
+}
+.t-5{
+color:#9013FE;
+}
+.t-6{
+color:#7ED321;
+}
+  }
+  p{
+    position: fixed;
+    width: 300px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+
+
+}
+.parent {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  clip: rect(0, auto, auto, 0);
+}
+
+
+#title{
+background: #000;
+z-index: -9999;
+
+}
+#one{
+  background: white;
+  z-index: 1;
+  .t-1{
+  color:black;
+  }
+  .t-2{
+  color:transparent;
+  }
+  .t-3{
+  color:transparent;
+  }
+  .t-4{
+  color:transparent;
+  }
+  .t-5{
+  color:transparent;
+  }
+  .t-6{
+  color:transparent;
+  }
+}
+#two{
+  background: black;
+  z-index: 2;
+
+  .t-1{
+  color:transparent;
+  }
+  .t-2{
+  color:#EE5846;
+  }
+  .t-3{
+  color:transparent;
+  }
+  .t-4{
+  color:transparent;
+  }
+  .t-5{
+  color:transparent;
+  }
+  .t-6{
+  color:transparent;
+  }
+}
+
+#three{
+  background: white;
+  z-index: 3;
+  .t-1{
+  color:transparent;
+  }
+  .t-2{
+  color:transparent;
+  }
+  .t-3{
+  color:#D29F2B;
+  }
+  .t-4{
+  color:transparent;
+  }
+  .t-5{
+  color:transparent;
+  }
+  .t-6{
+  color:transparent;
+  }
+}
+#four{
+  background: black;
+  z-index: 4;
+  .t-1{
+  color:transparent;
+  }
+  .t-2{
+  color:transparent;
+  }
+  .t-3{
+  color:transparent;
+  }
+  .t-4{
+  color:#006D84;
+  }
+  .t-5{
+  color:transparent;
+  }
+  .t-6{
+  color:transparent;
+  }
+}
+#five{
+  background: white;
+  z-index: 5;
+  .t-1{
+  color:transparent;
+  }
+  .t-2{
+  color:transparent;
+  }
+  .t-3{
+  color:transparent;
+  }
+  .t-4{
+  color:transparent;
+  }
+  .t-5{
+  color:#9013FE;
+  }
+  .t-6{
+  color:transparent;
+  }
+}
+#six{
+  background: black;
+  z-index: 6;
+  .t-1{
+  color:transparent;
+  }
+  .t-2{
+  color:transparent;
+  }
+  .t-3{
+  color:transparent;
+  }
+  .t-4{
+  color:transparent;
+  }
+  .t-5{
+  color:transparent;
+  }
+  .t-6{
+  color:#7ED321;
+  }
+}
+#beoordelen{
+
+  z-index: 7;
+  background: white;
+  text-align: center;
+.parent{
+  padding-top: 50%;
+}
+  fieldset{
+    margin-left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+  .t-1{
+  color:black;
+  }
+  h1{
+
+    &:after{
+      border-left:0px;
+
+    }
+  }
+}
+
+
+
+
+
+.rating {
+  border: none;
+  float:left;
+	margin: 0;
+	padding: 0;
+
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+  margin: 0em 0.5em 0.5em 0;
+  font-size: 1.25em;
+  font-family: 'Material Icons';
+  display: inline-block;
+  content: "star";
+}
+
+// .rating > .half:before {
+//   content: "star";
+//   position: absolute;
+// }
+
+.rating > label {
+  color: #ddd;
+ float: right;
+
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }

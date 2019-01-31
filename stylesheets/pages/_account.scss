@@ -5,6 +5,9 @@
     text-align: center;
     color: $dark-blue;
   }
+  main{
+    margin-top: 60px;
+  }
 }
 
 .login {
@@ -37,7 +40,7 @@ input[type="password"] {
           // adding new one
           background: white;
 border:1px solid $mid-blue;
-
+ 
 
 
         }

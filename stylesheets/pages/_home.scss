@@ -19,7 +19,7 @@
 	h1 {
 		color: #fff;
 		text-shadow: rgba(0, 0, 0, 0.6) 0 0 6px;
-		max-width: 300px;
+		max-width: 600px;
 		font-style: normal;
 		font-weight: 600;
 		color: rgb(255, 255, 255);
@@ -149,6 +149,7 @@ form.sort {
 	select {
 		-webkit-appearance: none;
 		font-family: inherit;
+		cursor: pointer;
 	}
 }
 
@@ -164,6 +165,11 @@ section.active-filter-container {
 	padding: 0.5em;
 	border-radius: 0.3em;
 	margin: 1em 0.5em;
+cursor: pointer;
+	&:hover {
+		color: $dark-blue;
+
+	}
 
 	&:after {
 		content: 'close';

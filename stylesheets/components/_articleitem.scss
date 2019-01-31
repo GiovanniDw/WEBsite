@@ -46,7 +46,13 @@ flex-grow: 1;
 
 		}
 		.header-bottom{
-
+			.rated{
+				font-family: 'Material Icons';
+				height: 20px;
+				margin-top: 0;
+				color:$yellow;
+				font-size: 1.2em;
+			}
 p{
 	clear: both;
 
@@ -150,48 +156,7 @@ p{
 
 
 
-
-
-
-
-
-
-
-.rating {
-  border: none;
-  float:left;
-	margin: 0;
-	padding: 0;
-
+p .rated{
+	font-family: 'Material Icons';
+	height: 20px;
 }
-
-.rating > input { display: none; }
-.rating > label:before {
-  margin: 0em 0.5em 0.5em 0;
-  font-size: 1.25em;
-  font-family: Material Icons;
-  display: inline-block;
-  content: "star";
-}
-
-// .rating > .half:before {
-//   content: "star";
-//   position: absolute;
-// }
-
-.rating > label {
-  color: #ddd;
- float: right;
-
-}
-
-/***** CSS Magic to Highlight Stars on Hover *****/
-
-.rating > input:checked ~ label, /* show gold star when clicked */
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
-
-.rating > input:checked + label:hover, /* hover current star when changing rating */
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
