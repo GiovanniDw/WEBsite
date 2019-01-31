@@ -47,66 +47,85 @@
         display: block;
         padding-left: 10px;
         padding-right: 10px;
-height: 60px  ;
-line-height: 3.5em;
-text-decoration: none;
-&:hover{
-  border-bottom: 2px solid $mid-blue;
-}
+        height: 60px;
+        line-height: 3.5em;
+        text-decoration: none;
 
+        &:hover {
+          border-bottom: 2px solid $mid-blue;
+        }
       }
     }
   }
 }
-.search{
 
-
-  &:before{
-    content:'search';
+.search {
+  &:before {
+    content: 'search';
     font-family: 'Material Icons';
     font-size: 1.3em;
     position: relative;
     top: 5px;
     left: -5px;
-
-
   }
-  &:after{@include respond-to('medium') {
-    content:'Zoeken';
-  }
+
+  &:after {
+    @include respond-to('medium') {
+      content: 'Zoeken';
+    }
   }
 }
-.fav{
+.addedList{
+transition-delay: 2s;
+  transition: 1s;
+animation: scaleList 1s;
+}
+.fav {
+transition-delay: 2s;
+  
 
-
-  &:before{
-    content:'list';
+  &:before {
+    content: 'list';
     font-family: 'Material Icons';
     font-size: 1.3em;
     position: relative;
     top: 5px;
     left: -5px;
-
   }
-  &:after{@include respond-to('medium') {
-    content:'Mijn Lijst';
 
-  }
+  &:after {
+    @include respond-to('medium') {
+      content: 'Mijn Lijst';
+    }
   }
 }
-.acc{
-  &:before{
-    content:'person';
+
+.acc {
+  &:before {
+    content: 'person';
     font-family: 'Material Icons';
     font-size: 1.3em;
     position: relative;
     top: 5px;
     left: -5px;
-
-  }
-  &:after{@include respond-to('medium') {
-    content:'Inloggen/Regristreren';
-  }
   }
 
+  &:after {
+    @include respond-to('medium') {
+      content: 'Inloggen/Regristreren';
+    }
+  }
+}
+@keyframes scaleList {
+  0% {
+      transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+      transform: scale(1);
+  }
 }

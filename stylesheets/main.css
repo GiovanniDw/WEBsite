@@ -605,16 +605,23 @@ body {
   .search:after {
     content: 'Zoeken'; } }
 
-.fav:before {
-  content: 'list';
-  font-family: 'Material Icons';
-  font-size: 1.3em;
-  position: relative;
-  top: 5px;
-  left: -5px; }
-@media (min-width: 50.0625em) {
-  .fav:after {
-    content: 'Mijn Lijst'; } }
+.addedList {
+  transition-delay: 2s;
+  transition: 1s;
+  animation: scaleList 1s; }
+
+.fav {
+  transition-delay: 2s; }
+  .fav:before {
+    content: 'list';
+    font-family: 'Material Icons';
+    font-size: 1.3em;
+    position: relative;
+    top: 5px;
+    left: -5px; }
+  @media (min-width: 50.0625em) {
+    .fav:after {
+      content: 'Mijn Lijst'; } }
 
 .acc:before {
   content: 'person';
@@ -627,6 +634,13 @@ body {
   .acc:after {
     content: 'Inloggen/Regristreren'; } }
 
+@keyframes scaleList {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.2); }
+  100% {
+    transform: scale(1); } }
 .container-flex {
   display: flex;
   flex-direction: column;
@@ -1016,7 +1030,7 @@ article {
   -webkit-transition: all 0.50s;
   -moz-transition: all 0.50s;
   -o-transition: all 0.50s;
-  transition: all 0.50s; }
+  transition: rotate(40deg) all 0.5s; }
 
 /*Hide the checkmark by default*/
 /*Unhide on the checked state*/
@@ -1218,45 +1232,137 @@ input[type="password"] {
   z-index: 99; }
   .verhaal section h1 {
     position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Saira Semi Condensed', sans-serif;
+    text-align: center;
+    font-size: 12em;
+    z-index: -1;
+    transition: .3s;
+    shadow: 0px 0px 66px 0px rgba(0, 0, 0, 0.75); }
+    .verhaal section h1 .t-1 {
+      color: white; }
+      .verhaal section h1 .t-1::after {
+        content: "";
+        position: fixed;
+        border: 0 solid transparent;
+        border-top: 90px solid transparent;
+        border-right: 0px solid yellow;
+        border-bottom: 0px solid red;
+        border-left: 900px solid white;
+        border-radius: 0 0 0 0;
+        top: 87px;
+        left: 6px;
+        width: 12px;
+        height: 100vh;
+        transform: rotate(0deg);
+        z-index: -1; }
+    .verhaal section h1 .t-2 {
+      color: #EE5846; }
+      .verhaal section h1 .t-2::after {
+        content: "";
+        position: fixed;
+        border: 0 solid transparent;
+        border-top: 90px solid transparent;
+        border-right: 0px solid yellow;
+        border-bottom: 0px solid red;
+        border-left: 900px solid #EE5846;
+        border-radius: 0 0 0 0;
+        top: 183px;
+        left: -115px;
+        width: 12px;
+        height: 100vh;
+        transform: rotate(20deg);
+        z-index: -1; }
+    .verhaal section h1 .t-3 {
+      color: #D29F2B; }
+      .verhaal section h1 .t-3::after {
+        content: "";
+        position: fixed;
+        border: 0 solid transparent;
+        border-top: 90px solid transparent;
+        border-right: 0px solid yellow;
+        border-bottom: 0px solid red;
+        border-left: 900px solid #D29F2B;
+        border-radius: 0 0 0 0;
+        top: 87px;
+        left: 6px;
+        width: 12px;
+        height: 100vh;
+        transform: rotate(40deg);
+        z-index: -1; }
+    .verhaal section h1 .t-4 {
+      color: #006D84; }
+      .verhaal section h1 .t-4::after {
+        content: "";
+        position: fixed;
+        border: 0 solid transparent;
+        border-top: 90px solid transparent;
+        border-right: 0px solid yellow;
+        border-bottom: 0px solid red;
+        border-left: 900px solid #006D84;
+        border-radius: 0 0 0 0;
+        top: 87px;
+        left: 6px;
+        width: 12px;
+        height: 100vh;
+        transform: rotate(60deg);
+        z-index: -1; }
+    .verhaal section h1 .t-5 {
+      color: #9013FE; }
+      .verhaal section h1 .t-5::after {
+        content: "";
+        position: fixed;
+        border: 0 solid transparent;
+        border-top: 90px solid transparent;
+        border-right: 0px solid yellow;
+        border-bottom: 0px solid red;
+        border-left: 900px solid #9013FE;
+        border-radius: 0 0 0 0;
+        top: 87px;
+        left: 6px;
+        width: 12px;
+        height: 100vh;
+        transform: rotate(80deg);
+        z-index: -1; }
+    .verhaal section h1 .t-6 {
+      color: #7ED321; }
+      .verhaal section h1 .t-6::after {
+        content: "";
+        position: fixed;
+        border: 0 solid transparent;
+        border-top: 90px solid transparent;
+        border-right: 0px solid yellow;
+        border-bottom: 0px solid red;
+        border-left: 900px solid #7ED321;
+        border-radius: 0 0 0 0;
+        top: 252px;
+        left: 6px;
+        width: 12px;
+        height: 100vh;
+        transform: rotate(115deg);
+        z-index: -1; }
+  .verhaal section h1.onScroll {
+    position: fixed;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Saira Semi Condensed', sans-serif;
     text-align: center;
+    font-size: 10vw;
     z-index: 9999; }
-    .verhaal section h1 span:nth-child(2)::after {
-      content: "";
-      position: fixed;
-      border: 0 solid transparent;
-      border-top: 90px solid transparent;
-      border-right: 0px solid yellow;
-      border-bottom: 0px solid red;
-      border-left: 900px solid blue;
-      border-radius: 0 0 0 0;
-      top: 59px;
-      left: 0px;
-      width: 12px;
-      height: 100vh;
-      transform: rotate(0deg); }
-    .verhaal section h1 .t-1 {
-      color: white; }
-    .verhaal section h1 .t-2 {
-      color: #EE5846; }
-    .verhaal section h1 .t-3 {
-      color: #D29F2B; }
-    .verhaal section h1 .t-4 {
-      color: #006D84; }
-    .verhaal section h1 .t-5 {
-      color: #9013FE; }
-    .verhaal section h1 .t-6 {
-      color: #7ED321; }
+    .verhaal section h1.onScroll:after {
+      left: 16px;
+      width: 12px; }
   .verhaal section p {
     position: fixed;
     width: 300px;
     height: auto;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    z-index: 999999; }
 
 .parent {
   position: absolute;
@@ -1271,96 +1377,170 @@ input[type="password"] {
 #one {
   background: white;
   z-index: 1; }
+  #one p {
+    color: white; }
   #one .t-1 {
     color: black; }
+    #one .t-1:after {
+      border-color: black; }
   #one .t-2 {
     color: transparent; }
+    #one .t-2:after {
+      border-color: transparent; }
   #one .t-3 {
     color: transparent; }
+    #one .t-3:after {
+      border-color: transparent; }
   #one .t-4 {
     color: transparent; }
+    #one .t-4:after {
+      border-color: transparent; }
   #one .t-5 {
     color: transparent; }
+    #one .t-5:after {
+      border-color: transparent; }
   #one .t-6 {
     color: transparent; }
+    #one .t-6:after {
+      border-color: transparent; }
 
 #two {
   background: black;
   z-index: 2; }
+  #two p {
+    color: black; }
   #two .t-1 {
     color: transparent; }
+    #two .t-1:after {
+      border-color: transparent; }
   #two .t-2 {
     color: #EE5846; }
   #two .t-3 {
     color: transparent; }
+    #two .t-3:after {
+      border-color: transparent; }
   #two .t-4 {
     color: transparent; }
+    #two .t-4:after {
+      border-color: transparent; }
   #two .t-5 {
     color: transparent; }
+    #two .t-5:after {
+      border-color: transparent; }
   #two .t-6 {
     color: transparent; }
+    #two .t-6:after {
+      border-color: transparent; }
 
 #three {
   background: white;
   z-index: 3; }
+  #three p {
+    color: white; }
   #three .t-1 {
     color: transparent; }
+    #three .t-1:after {
+      border-color: transparent; }
   #three .t-2 {
     color: transparent; }
+    #three .t-2:after {
+      border-color: transparent; }
   #three .t-3 {
     color: #D29F2B; }
   #three .t-4 {
     color: transparent; }
+    #three .t-4:after {
+      border-color: transparent; }
   #three .t-5 {
     color: transparent; }
+    #three .t-5:after {
+      border-color: transparent; }
   #three .t-6 {
     color: transparent; }
+    #three .t-6:after {
+      border-color: transparent; }
 
 #four {
   background: black;
   z-index: 4; }
+  #four p {
+    color: black; }
   #four .t-1 {
     color: transparent; }
+    #four .t-1:after {
+      border-color: transparent; }
   #four .t-2 {
     color: transparent; }
+    #four .t-2:after {
+      border-color: transparent; }
   #four .t-3 {
     color: transparent; }
+    #four .t-3:after {
+      border-color: transparent; }
   #four .t-4 {
     color: #006D84; }
   #four .t-5 {
     color: transparent; }
+    #four .t-5:after {
+      border-color: transparent; }
   #four .t-6 {
     color: transparent; }
+    #four .t-6:after {
+      border-color: transparent; }
 
 #five {
   background: white;
   z-index: 5; }
+  #five p {
+    color: white; }
   #five .t-1 {
     color: transparent; }
+    #five .t-1:after {
+      border-color: transparent; }
   #five .t-2 {
     color: transparent; }
+    #five .t-2:after {
+      border-color: transparent; }
   #five .t-3 {
     color: transparent; }
+    #five .t-3:after {
+      border-color: transparent; }
   #five .t-4 {
     color: transparent; }
+    #five .t-4:after {
+      border-color: transparent; }
   #five .t-5 {
     color: #9013FE; }
   #five .t-6 {
     color: transparent; }
+    #five .t-6:after {
+      border-color: transparent; }
 
 #six {
   background: black;
   z-index: 6; }
+  #six p {
+    color: black; }
   #six .t-1 {
     color: transparent; }
+    #six .t-1:after {
+      border-color: transparent; }
   #six .t-2 {
     color: transparent; }
+    #six .t-2:after {
+      border-color: transparent; }
   #six .t-3 {
     color: transparent; }
+    #six .t-3:after {
+      border-color: transparent; }
   #six .t-4 {
     color: transparent; }
+    #six .t-4:after {
+      border-color: transparent; }
   #six .t-5 {
     color: transparent; }
+    #six .t-5:after {
+      border-color: transparent; }
   #six .t-6 {
     color: #7ED321; }
 
@@ -1375,6 +1555,8 @@ input[type="password"] {
     transform: translate(-50%, -50%); }
   #beoordelen .t-1 {
     color: black; }
+  #beoordelen .t-1:after, #beoordelen .t-2:after, #beoordelen .t-3:after, #beoordelen .t-4:after, #beoordelen .t-5:after, #beoordelen .t-6:after {
+    border-color: transparent; }
   #beoordelen h1:after {
     border-left: 0px; }
 
